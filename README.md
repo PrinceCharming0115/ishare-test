@@ -69,5 +69,5 @@ You are required to build a RESTful API for a simple task management application
 
     <http://127.0.0.1:8000/docs/index.html>
 
-### Note:
-If you make assumptions, please note them down in documentation.
+7. You can see instruction video in this url.
+    <https://drive.google.com/file/d/1TtcrJObGBBQYTj-M41e83JVPXT0onrlx/view?usp=drive_link>
