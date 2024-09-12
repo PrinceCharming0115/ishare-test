@@ -7,8 +7,13 @@ import (
 	"log"
 )
 
-// @Title IShare TEST
+// @Title Secure REST API
 // @Version 1.0
+// @Description This is a Secure REST API written in GO.
+// @SecurityDefinitions.apikey ApiKeyAuth
+// @Type apiKey
+// @In header
+// @Name Authorization
 
 func main() {
 	config := config.NewConfig()

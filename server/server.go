@@ -3,6 +3,7 @@ package server
 import (
 	"ishare-test/config"
 	"ishare-test/db"
+	"ishare-test/models"
 
 	_ "ishare-test/docs"
 
@@ -23,6 +24,8 @@ func NewServer(config *config.Config) (*Server, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	db.AutoMigrate(&models.Task{})
 
 	return &Server{
 		App:    app,

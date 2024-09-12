@@ -28,6 +28,7 @@ func NewHandlerTasks(server *s.Server) *HandlerTasks {
 // @Tags Tasks
 // @Accept json
 // @Produce json
+// @Security ApiKeyAuth
 // @Param params body requests.RequestTask true "Task Request"
 // @Success 200 {object} responses.Data
 // @Failure 400 {object} responses.Error
@@ -66,6 +67,7 @@ func (h *HandlerTasks) CreateTask(c *fiber.Ctx) error {
 // @Tags Tasks
 // @Accept json
 // @Produce json
+// @Security ApiKeyAuth
 // @Success 200 {object} []responses.ResponseTask
 // @Failure 500 {object} responses.Error
 // @Router /tasks [get]
@@ -86,6 +88,7 @@ func (h *HandlerTasks) ListTasks(c *fiber.Ctx) error {
 // @Tags Tasks
 // @Accept json
 // @Produce json
+// @Security ApiKeyAuth
 // @Param id path string true "ID"
 // @Success 200 {object} responses.ResponseTask
 // @Failure 400 {object} responses.Error
@@ -114,6 +117,7 @@ func (h *HandlerTasks) GetTask(c *fiber.Ctx) error {
 // @Tags Tasks
 // @Accept json
 // @Produce json
+// @Security ApiKeyAuth
 // @Param id path string true "ID"
 // @Param params body requests.RequestTask true "Task Request"
 // @Success 200 {object} []responses.ResponseTask
@@ -161,6 +165,7 @@ func (h *HandlerTasks) UpdateTask(c *fiber.Ctx) error {
 // @Tags Tasks
 // @Accept json
 // @Produce json
+// @Security ApiKeyAuth
 // @Param id path string true "ID"
 // @Success 200 {object} responses.Data
 // @Failure 400 {object} responses.Error

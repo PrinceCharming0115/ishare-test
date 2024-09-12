@@ -7,12 +7,15 @@ import (
 )
 
 type Config struct {
-	PostgresHost     string
-	PostgresPort     string
-	PostgresUser     string
-	PostgresPassword string
-	PostgresDb       string
-	ServerPort       string
+	PostgresHost      string
+	PostgresPort      string
+	PostgresUser      string
+	PostgresPassword  string
+	PostgresDb        string
+	ServerPort        string
+	ClientID          string
+	ClientSecret      string
+	ClientCallbackUrl string
 }
 
 func NewConfig() *Config {
@@ -34,6 +37,11 @@ func (config *Config) LoadEnvironment() error {
 
 	// Server configuration
 	config.ServerPort = os.Getenv("SERVER_PORT")
+
+	// OAuth2.0 configuration
+	config.ClientID = os.Getenv("CLIENT_ID")
+	config.ClientSecret = os.Getenv("CLIENT_SECRET")
+	config.ClientCallbackUrl = os.Getenv("CLIENT_CALLBACK_URL")
 
 	return nil
 }
